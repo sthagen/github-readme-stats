@@ -52,10 +52,28 @@
     .
     <a href="/docs/readme_nl.md">Nederlands</a>
     .
+    <a href="/docs/readme_np.md">नेपाली</a>
+    .
     <a href="/docs/readme_tr.md">Türkçe</a>
   </p>
 </p>
-<p align="center">Loved the project? Please consider <a href="https://www.paypal.me/anuraghazra">donating</a> to help it improve!
+<p align="center">Love the project? Please consider <a href="https://www.paypal.me/anuraghazra">donating</a> to help it improve!
+
+
+<p>
+<a href="https://indiafightscorona.giveindia.org">
+<img src="https://d2wvdrxmr8p0wf.cloudfront.net/static/giveindia.svg" alt="Give india logo" width="200" />
+</a>
+
+Are you considering to support the project by donating to me? Please DON'T!!  
+
+Instead, Help India fight 2nd deadly wave of COVID,  
+Thousands of people are dying in India for lack of Oxygen & COVID related necessary infrastructure.  
+
+Visit [https://indiafightscorona.giveindia.org](https://indiafightscorona.giveindia.org) and make a small donation to help us fight covid and overcome this crisis.   
+Your small help goes a long way. :heart:
+</p>
+
 
 # Features
 
@@ -138,11 +156,13 @@ You can customize the appearance of your `Stats Card` or `Repo Card` however you
 - `title_color` - Card's title color _(hex color)_
 - `text_color` - Body text color _(hex color)_
 - `icon_color` - Icons color if available _(hex color)_
+- `border_color` - Card's border color _(hex color)_. (Does not apply when `hide_border` is enabled)
 - `bg_color` - Card's background color _(hex color)_ **or** a gradient in the form of _angle,start,end_
 - `hide_border` - Hides the card's border _(boolean)_
 - `theme` - name of the theme, choose from [all available themes](./themes/README.md)
 - `cache_seconds` - set the cache header manually _(min: 1800, max: 86400)_
 - `locale` - set the language in the card _(e.g. cn, de, es, etc.)_
+- `border_radius` - Corner rounding on the card_
 
 ##### Gradient in bg_color
 
@@ -192,7 +212,9 @@ You can provide multiple comma-separated values in bg_color option to render a g
 - `hide_progress` - Hides the progress bar and percentage _(boolean)_
 - `custom_title` - Sets a custom title for the card
 - `layout` - Switch between two available layouts `default` & `compact`
-- `api_domain` - Set a custom api domain for the card
+- `langs_count` - Limit number of languages on the card, defaults to all reported langauges
+- `api_domain` - Set a custom API domain for the card, e.g. to use services like [Hakatime](https://github.com/mujx/hakatime) or [Wakapi](https://github.com/muety/wakapi)
+- `range` – Request a range different from your WakaTime default, e.g. `last_7_days`. See [WakaTime API docs](https://wakatime.com/developers#stats) for list of available options.
 
 ---
 
@@ -310,6 +332,10 @@ Change the `?username=` value to your [Wakatime](https://wakatime.com) username.
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra&hide=issues&show_icons=true)
 
+- Customize Border Color
+
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra&border_color=2e4058)
+
 - Include All Commits
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra&include_all_commits=true)
@@ -350,7 +376,7 @@ Choose from any of the [default themes](#themes)
 
 You usually won't be able to layout the images side by side. To do that you can use this approach:
 
-```md
+```html
 <a href="https://github.com/anuraghazra/github-readme-stats">
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats" />
 </a>
